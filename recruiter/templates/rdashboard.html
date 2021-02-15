@@ -1,0 +1,42 @@
+{% include "rheader.html" %}
+
+    <!-- Banner Ends Here -->
+
+
+    <div class="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            {% include "rsidebar.html" %}
+          </div>
+
+          <div class="col-lg-9 ">  {% if jobopenings.count == 0 %}
+              <div> no record found</div>
+              {% else %}
+          <div class="row d-flex justify-content-between">
+
+                  {% for candidate in seeker  %}
+             <div class="card bg-light col-lg-4 my-2 "  >
+              <div class="card-header">{{candidate.qualification.name}} </div>
+              <div class="card-body">
+                <h4 class="card-title"> {{candidate.designation}}</h4><span> ( {{candidate.location}} )</span>
+                <p class="card-text"><b>Experience</b> :{{candidate.exprience.name}}</p>
+                <p class="card-text"><b>Sector</b> : {{candidate.area_of_sector}} </p>
+                <p class="card-text"><b>Gender</b> : {{candidate.gender}} </p>
+                <p class="card-text">{{candidate.p_year}}</p>
+              </div>
+               <div class="card-footer">
+                 <a href="/recruiter/viewcandidate/{{candidate.id}}" class="btn btn-sm btn-primary">See Detail</a>
+               </div>
+            </div>
+             {% endfor %}
+
+            </div>
+          {% endif %}
+          </div></div>
+
+          </div>
+      </div>
+    </div>
+
+{% include "footer.html" %}

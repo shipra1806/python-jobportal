@@ -1,0 +1,92 @@
+<div id="accordion">
+
+            <div class="card">
+              <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                  Location
+                </a>
+              </div>
+              <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                <div class="card-body">
+                    <ul class="">
+                        {% for locs in locations %}
+                        <li class="nav-item"><a href="/recruiter/search/location/{{locs.id}}">{{locs.name}}</a></li>
+                        {% endfor %}
+
+                      </ul>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                  Skills
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    <ul class="">
+
+
+                        <li class="nav-item"><a href="/search/keyskills/1">php</a></li>
+
+                        <li class="nav-item"><a href="/search/keyskills/2">java</a></li>
+
+                        <li class="nav-item"><a href="/search/keyskills/3">python</a></li>
+
+                        <li class="nav-item"><a href="/search/keyskills/4">dsfsdf</a></li>
+
+                      </ul>
+
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                    Experience
+                  </a>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                  <div class="card-body">
+                      <ul class="">
+
+
+                          <li class="nav-item"><a href="/search/exprience/1">Fresher</a></li>
+
+                          <li class="nav-item"><a href="/search/exprience/2">1 year</a></li>
+
+                          <li class="nav-item"><a href="/search/exprience/3">2 Years</a></li>
+
+                        </ul>
+
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseSix">
+                    Area of Sector
+                  </a>
+                </div>
+                <div id="collapseSix" class="collapse" data-parent="#accordion">
+                  <div class="card-body">
+                      <ul class="">
+
+
+                          <li class="nav-item"><a href="/rsearch/area_of_sector/1">Production</a></li>
+
+                          <li class="nav-item"><a href="/search/area_of_sector/2">Marketing</a></li>
+
+                          <li class="nav-item"><a href="/search/area_of_sector/3">Sales</a></li>
+
+                          <li class="nav-item"><a href="/search/area_of_sector/4">Accounts</a></li>
+
+                        </ul>
+                  </div>
+                </div>
+              </div>
+</div>

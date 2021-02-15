@@ -1,0 +1,38 @@
+{% include "rheader.html" %}
+
+
+    <div class="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            {% include "rsidebar.html" %}
+          </div>
+          <div class="col-lg-9 ">
+          <div class="row d-flex justify-content-between">
+
+                  {% for candidate in seeker  %}
+             <div class="card bg-light col-lg-12 my-2 "  >
+              <div class="card-header">Candidates Detail</div>
+              <div class="card-body">
+                <p class="card-text"><b>Designation : </b> {{candidate.designation}}</p>
+                <p class="card-text"><b>Location :</b>  {{candidate.location}} </p>
+                <p class="card-text"><b>Job Type</b> :{{candidate.job_type}}</p>
+                <p class="card-text"><b>Experience</b> :{{candidate.exprience.name}}</p>
+                <p class="card-text"><b>Sector</b> : {{candidate.area_of_sector}} </p>
+                <p class="card-text"><b>Skills</b> : {{candidate.keyskills}} </p>
+                <p class="card-text"><b>Salary Range</b> : {{candidate.salary_range}} </p>
+                <p class="card-text"><b>Description</b> : {{candidate.description}}</p>
+               </div>
+               <div class="card-footer">
+
+               </div>
+            </div>
+             {% endfor %}
+
+            </div></div></div>
+
+          </div>
+      </div>
+    </div>
+
+{% include "footer.html" %}
